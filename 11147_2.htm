@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"caff0d62ed","applicationID":"3939478","transactionName":"IQ1XRUEOVV1dFxlRXAEXSlRATkpZVxI=","queueTime":0,"applicationTime":327,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta content='[]' name='optimize-experiments'>
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="JsLsdAwyBPjszTVLJltwqPBN3nvB2zcI/KOmu3u+jDguYmExXFtoRh2YzUmZhwEmKMWc1c8eEeXES/0Yr3MKjg==" />
+<title>Developing on AWS - Lab 6 - Docker | Qwiklabs + exitcertified</title>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0' name='viewport'>
+<meta content='Developing on AWS is a three-day instructor led course.' name='description'>
+<meta content='Learn AWS, AWS Training, AWS Labs, Learn Amazon Web Services, Amazon Web Services Training, Amazon Web Services Labs' name='keywords'>
+<meta content='Qwiklabs' name='author'>
+<meta property="og:url" content="https://www.qwiklabs.com/classrooms/1712/labs/11146" /><link href="https://www.qwiklabs.com/classrooms/1712/labs/11146" rel="canonical" />
+<meta content='1rRsY0INj8RvwB5EF5pwdxt2A2P9aDgAlsICaJ0d5w0' name='google-site-verification'>
+<meta content='noindex' name='robots'>
+<meta content='Developing on AWS - Lab 6 - Docker | Qwiklabs + exitcertified' property='og:title'>
+<meta content='website' property='og:type'>
+<meta content='/favicon-144.png' property='og:image'>
+<meta content='Qwiklabs' property='og:site_name'>
+<meta content='Developing on AWS is a three-day instructor led course.' property='og:description'>
+<meta content='/qwiklabs_logo_900x887.png' property='og:logo' size='900x887'>
+<meta content='/qwiklabs_logo_994x187.png' property='og:logo' size='994x187'>
+<meta content='#3681E4' property='msapplication-TileColor'>
+<meta content='/favicon-144.png' property='msapplication-TileImage'>
+<link href='/favicon-32.png' rel='shortcut icon'>
+<link color='#3681E4' href='/favicon-svg.svg' rel='mask-icon'>
+<link href='/favicon-180.png' rel='apple-touch-icon-precomposed'>
+<link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=Oswald:400|Roboto+Mono:400,700|Roboto:300,400,500,700|Google+Sans:300,400,500,700|Google+Sans+Display:400|Material+Icons" />
+
+
+<!--[if lt IE 9]>
+<script src='http://html5shim.googlecode.com/svn/trunk/html5.js' type='text/javascript'></script>
+<![endif]-->
+<!--[endif]>  <![endif]-->
+<script>
+//<![CDATA[
+window.gon={};gon.current_user={"firstname":"Niruban","lastname":"Kandasamy","fullname":"Niruban Kandasamy","company":"CRA","email":"niruban@gmail.com","origin":"exitcertified, direct","subscriptions":0,"id":"75be0980429c605a1723bd89d088564b","qlCreatedAt":"2018-12-04 14:48:35 UTC","optIn":true};gon.segment=null;gon.deployment="exitcertified";
+//]]>
+</script>
+
+
+
+<link rel="stylesheet" media="all" href="https://cdn.qwiklabs.com/assets/application-6a8dde4066a5d619bd9a7e970640b996924789efe3aee810fdfda378f7cff6de.css" />
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="https://cdn.qwiklabs.com/polyfills/webcomponents-loader.js"></script>
+<script src="https://cdn.qwiklabs.com/assets/application-be23faff1797c30ce2e0f75b9e6783dbf4d5d64b7867b3ba2e4c503116d9ef8b.js"></script>
+<script src="https://cdn.qwiklabs.com/assets/hallofmirrors-d20e6c7de8f6c0aa61f607d15f888c94364c8aa21a1e848684cc347579f866c5.js"></script>
+</head>
+<body class='focuses focuses-show lab-show'>
+<div class='header-container'>
+<div class='header'>
+<a class='mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect header__button header__button--nav header__side-menu-button js-side-menu-button'>
+<i class='material-icons'>menu</i>
+</a>
+<div class='header__title'>
+<a class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect header__button header__button--nav" href="/classrooms/1712"><i class="material-icons">arrow_back</i></a>
+
+<h1 class='headline-5'>
+Developing on AWS - Lab 6 - Docker
+</h1>
+</div>
+<div class='header__actions'>
+<a class='header-my-account-button mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect js-my-account-button'>
+<img class="avatar " src="https://secure.gravatar.com/avatar/4fe17da52f056093465eeebfcef52817.png?s=80&amp;d=mm" />
+</a>
+<div class='header-my-account-menu js-my-account-menu'>
+<div class='card elevation-2 no-padding'>
+<div class='my-account-menu__top'>
+<img class="avatar " src="https://secure.gravatar.com/avatar/4fe17da52f056093465eeebfcef52817.png?s=80&amp;d=mm" />
+<div class='my-account-menu__info'>
+<h4 class='subtitle-headline-1'>
+Niruban Kandasamy
+</h4>
+<p class='body-2 text--gray'>
+<span>niruban@gmail.com</span>
+</p>
+<a class="button" href="/my_account/profile">My Account</a>
+</div>
+</div>
+<div class='my-account-menu__bottom'>
+<a class="button button--hairline" rel="nofollow" data-method="delete" href="/users/sign_out">Sign out</a>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div class='header__search-bar js-header-search-bar'>
+<form id="catalog-search-mobile" onsubmit="ql.catalogSearchFilter(); return false;" action="/searches/lab" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="9hRLD+keFSz13Wmd/KJXIKyrQ6z2xTx3yPf3qjSoCLr+tMZKuXd5kgSIkZ9DfiaudCMBAvgAGprwH6wJ4GWODA==" />
+<input type="text" name="keywords" id="keywords" placeholder="Search" />
+</form>
+
+<a class='mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect header__button'>
+<i class='material-icons'>close</i>
+</a>
+</div>
+
+<nav class='side-menu js-side-menu'>
+<div class='side-menu__inner' style='min-height: 346px;'>
+<nav class='side-menu__nav'>
+<a title="Home" class="side-menu__item js-navigation-button" href="/home"><div class='side-menu__item__icon'>
+<i class='material-icons'>home</i>
+</div>
+<div class='side-menu__item__label'>
+Home
+</div>
+</a>
+<a title="Catalog" class="side-menu__item js-navigation-button" href="/catalog"><div class='side-menu__item__icon'>
+<i class='material-icons'>school</i>
+</div>
+<div class='side-menu__item__label'>
+Catalog
+</div>
+</a>
+<a title="My Learning" class="side-menu__item js-navigation-button active" aria-current="page" href="/my_learning"><div class='side-menu__item__icon'>
+<i class='material-icons'>event_note</i>
+</div>
+<div class='side-menu__item__label'>
+My Learning
+</div>
+</a>
+<a title="Help" target="_blank" class="side-menu__item js-navigation-button" href="//support.google.com/qwiklabs"><div class='side-menu__item__icon'>
+<i class='material-icons'>help</i>
+</div>
+<div class='side-menu__item__label'>
+Help
+</div>
+</a>
+</nav>
+<div class='side-menu__small-links js-small-links'>
+<a href="/privacy_policy">Privacy</a>
+<a href="/terms_of_service">Terms of Service</a>
+</div>
+</div>
+</nav>
+
+<main>
+<div class='l-main-wrapper js-main'>
+<span class='hidden' id='flash-sibling-before'></span>
+
+
+
+
+
+
+
+<div class='l-lab-container js-lab_and_classroom_info' data-deployment='exitcertified' data-lab-name='Developing on AWS - Lab 6 - Docker' data-label='Developing on AWS - Lab 6 - Docker'></div>
+<div class='l-lab-sidebar js-lab-sidebar-container'>
+<div class='lab-sidebar js-lab-sidebar elevation-1'>
+<div class='lab-sidebar__group text--small'>
+3m setup
+&middot;
+150m access
+&middot;
+150m completion
+</div>
+<div class='lab-sidebar__group'>
+<div class='rateit l-mrm' data-rateit-readonly='true' data-rateit-value='4.05'></div>
+<a class='small-label l-mrm' data-target='#lab-review-modal' data-toggle='modal'>
+Rate Lab
+</a>
+<a class='small-label' data-target='#lab-details-modal' data-toggle='modal'>
+Lab Details
+</a>
+</div>
+<div class='lab-sidebar__group'>
+<h5 class='l-mbs'>Connection Details</h5>
+<div class='form-row js-form-row'>
+<a class='button button--full-width button--secondary is-disabled js-connection-dns-link js-external-window' target='_blank'>
+Open Console
+</a>
+</div>
+
+<p class='caption l-mtm l-mbm'>
+<b>Warning:</b> Do not transmit data into the AWS Console that is not related to Qwiklabs or the lab you are taking.
+</p>
+<div class='form-row js-form-row'>
+<div class='control-group'>
+<label class='label--console'>
+Username 
+</label>
+<input class='input input--console js-connection-username-0' disabled='disabled' readonly='readonly' value='&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;'>
+<button class='button button--copy button--copy-input js-copy-input-button' data-clipboard-target='.js-connection-username-0'>
+<i class='fa fas fa-clipboard'></i>
+</button>
+</div>
+</div>
+
+<div class='form-row js-form-row'>
+<div class='control-group'>
+<label class='label--console'>
+Password
+</label>
+<input class='input input--console js-connection-password' disabled='disabled' readonly='readonly' value='&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;'>
+<button class='button button--copy button--copy-input js-copy-input-button' data-clipboard-target='.js-connection-password'>
+<i class='fa fas fa-clipboard'></i>
+</button>
+</div>
+</div>
+
+<div class='form-row js-form-row'>
+<div class='control-group'>
+<label class='label--console'>
+AWS Account 
+</label>
+<input class='input input--console js-connection-project-0' disabled='disabled' readonly='readonly' value='&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;'>
+<button class='button button--copy button--copy-input js-copy-input-button' data-clipboard-target='.js-connection-project-0'>
+<i class='fa fas fa-clipboard'></i>
+</button>
+</div>
+</div>
+
+
+<div class='form-row js-form-row'>
+<div class='control-group'>
+<label class='label--console'>
+Access Key Id
+</label>
+<input class='input input--console js-connection-access-key-id' disabled='disabled' readonly='readonly' value='&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;'>
+<button class='button button--copy button--copy-input js-copy-input-button' data-clipboard-target='.js-connection-access-key-id'>
+<i class='fa fas fa-clipboard'></i>
+</button>
+</div>
+</div>
+
+<div class='form-row js-form-row'>
+<div class='control-group'>
+<label class='label--console'>
+Secret Access Key
+</label>
+<input class='input input--console js-connection-secret-access-key' disabled='disabled' readonly='readonly' value='&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;'>
+<button class='button button--copy button--copy-input js-copy-input-button' data-clipboard-target='.js-connection-secret-access-key'>
+<i class='fa fas fa-clipboard'></i>
+</button>
+</div>
+</div>
+
+
+<div class='form-row js-form-row'>
+<div class='control-group'>
+<label class='label--console'>
+Endpoint
+</label>
+<input class='input input--console js-connection-endpoint' disabled='disabled' readonly='readonly' value='&middot;&middot;&middot;&middot;&middot;&middot;&middot;&middot;'>
+<button class='button button--copy button--copy-input js-copy-input-button' data-clipboard-target='.js-connection-endpoint'>
+<i class='fa fas fa-clipboard'></i>
+</button>
+</div>
+</div>
+
+<div class='form-row'>
+<div class='control-group'>
+<label class='label--console'>
+EC2 Key Pair Private Key:
+</label>
+<ul class='list--custom-icons list--custom-icons--reverse l-mts'>
+<li class='small-label'>
+<a class='link--console is-disabled js-connection-pem'>
+Download PEM
+</a>
+<i class='fa fas fa-download text--blue'></i>
+</li>
+<li class='small-label'>
+<a class='link--console is-disabled js-connection-ppk'>
+Download PPK
+</a>
+<i class='fa fas fa-download text--blue'></i>
+</li>
+</ul>
+</div>
+</div>
+
+<div class='lab-sidebar__resource lab-sidebar__resource--additional-details l-mtl is-hidden js-cf-connection-output'></div>
+<div class='lab-sidebar__resource lab-sidebar__resource--additional-details l-mtl is-hidden js-additional-connection-info'></div>
+</div>
+</div>
+</div>
+<div class='l-lab-main-header'>
+<header class='lab-header js-lab-header elevation-1'>
+<div class='lab-header__section lab-header__section--flex'>
+<div class='lab-header__progress is-hidden js-progress'>
+<div class='lab-header__progress__bar js-progress-bar'></div>
+</div>
+</div>
+<div class='lab-header__section lab-header__section--no-border lab-header-section-progress'>
+<span class='lab-header__progress-message is-hidden js-progress-message'>
+<div class='lab-header__progress-message__indicator js-progress-message-indicator'></div>
+<span class='js-progress-message-incomplete'>
+Lab Setting Up
+</span>
+<span class='js-progress-message-complete is-hidden'>
+Lab Running
+</span>
+</span>
+</div>
+<div class='lab-header__section'>
+<a class='button button--start button--lab js-start-lab-button' data-focus-id='11146' data-lab-access='none' data-lab-instance-id='' data-parent='classroom'>
+Start Lab
+</a>
+<a class='button button--wait button--lab js-waiting-lab-button is-hidden'>
+<i class='fa fa-spinner fa-pulse'></i>
+</a>
+<a class='button button--end button--lab js-end-lab-button is-hidden'>
+End Lab
+</a>
+</div>
+<div class='lab-header__section'>
+<h3 class='text--sign js-timer' data-duration='9000'>
+02:30:00
+</h3>
+</div>
+</header>
+</div>
+<div class='l-lab-main-body'>
+<div class='js-lab-content lab-content'>
+<div class='alert alert--fake js-alert'>
+<p class='alert__message js-alert-message'></p>
+<a class='alert__close js-alert-close'>
+<i class='fa fa-times'></i>
+</a>
+<iframe class='l-ie-iframe-fix'></iframe>
+</div>
+<div class='lab-content__markdown-wrapper'>
+<div class='js-markdown-instructions lab-content__markdown markdown-lab-instructions no-select' id='markdown-lab-instructions'>
+
+<h1>Working with Docker Containers</h1>
+
+<p>In this lab, you will learn how to host a basic website by using Dockers containers.</p>
+
+<p>Understanding how to create Docker images and launch containers is a very useful skill for a developer. You will be starting out with a base EC2 instance with Docker installed. Using this instance, you will create a Docker image and then launch a container. You will then create an ECR Repository to send the Docker image you will build.</p>
+
+<p><img src="http://us-west-2-tcprod.s3.amazonaws.com/courses/ILT-TF-100-DODEVA/v3.0.2/lab-6-docker/scripts/lab-6-diagram.png" alt="Lab 6 Diagram"></p>
+
+<p><strong>Objectives</strong></p>
+
+<p>After completing this lab, you will be able to:</p>
+<ul>
+<li>Create a Dockerfile.</li>
+<li>Create a Docker image by using a dockerfile.</li>
+<li>Run a container from a Docker image.</li>
+<li>Interact with and administer your containers.</li>
+<li>Create an ECR Repository.</li>
+<li>Authenticate the Docker client to ECR.</li>
+<li>Push a Docker image to ECR.</li>
+</ul>
+<p><strong>Prerequisites</strong></p>
+
+<p>This lab requires:</p>
+<ul>
+<li>Access to a notebook computer with Wi-Fi running Microsoft Windows, macOS, or Linux (Ubuntu, SuSE, or Red Hat).</li>
+<li>An Internet browser such as Chrome, Firefox, or IE9+ (previous versions of Internet Explorer are not supported).</li>
+<li>You will need either an SSH client, such as PuTTY to connect to your development EC2 instance. Or, you can connect by using AWS Cloud9.</li>
+</ul>
+<p><strong>Note</strong> You can use an iPad or tablet device to access these directions in Qwiklabs.  </p>
+
+<p><strong>Duration</strong></p>
+
+<p>This lab will require around <strong>45 minutes</strong> to complete.</p>
+
+
+
+<h2 id='step1'>Task 1: Connecting to Your Development Environment</h2>
+
+<p>In this section, will connect to your development environment.</p>
+<ol start="1">
+<li>To the right of the lab title, click <strong>Start Lab</strong> to launch your Qwiklabs.</li>
+</ol>
+<p><img src="http://us-west-2-tcprod.s3.amazonaws.com/courses/ILT-TF-100-DODEVA/v3.0.2/lab-6-docker/scripts/start.png" alt="Start Lab"></p>
+<ol start="2">
+<li>In the <strong>Connection Details</strong> section in Qwiklabs, <strong>copy</strong> the <strong>Password</strong> to the clipboard and then click <strong>Open Console</strong>.</li>
+</ol>
+<p><img src="http://us-west-2-tcprod.s3.amazonaws.com/courses/ILT-TF-100-DODEVA/v3.0.2/lab-6-docker/scripts/open.png" alt="Open Console"></p>
+<ol start="3">
+<li>Sign in the AWS Management Console by using the following steps:</li>
+</ol><ul>
+<li>For <strong>IAM user name</strong>, enter: <input readonly class="copyable-inline-input" size="10" type="text" value="awsstudent">
+</li>
+<li>For <strong>Password</strong>, paste the password from the clipboard.</li>
+<li>Click <strong>Sign In</strong>.</li>
+</ul><ol start="4">
+<li>There are multiple ways for you to complete this lab. You can either use AWS Cloud 9 or connect directly to your Dev Linux instance.</li>
+</ol>
+<p>If you don't have access to a local SSH client, or your access is restricted by a firewall, you can use a web browser and use the AWS Cloud9 service to complete this lab.
+However, it's a great way to learn about AWS Cloud9 by using this option for the lab.</p>
+
+<p>To complete the lab by using AWS Cloud9 (recommended), see the following directions:</p>
+<ul>
+<li><a href="#connecting_cloud9">Completing the Lab By Using AWS Cloud9</a></li>
+</ul>
+<p>To complete the lab by connecting to your Linux Dev instance, see the following directions:</p>
+<ul>
+<li><a href="#connecting_linux">Completing the Lab By Connecting to Your Amazon EC2 Linux Instance</a></li>
+</ul>
+<p><a id="connecting_cloud9"></a></p>
+
+<h2 id='step2'>Completing the Lab By Using AWS Cloud9</h2>
+
+<p>AWS Cloud9 allows you to write, run, and debug your code by using only a web browser. With AWS Cloud9, you have immediate access to a rich code editor, integrated debugger, and built-in terminal with preconfigured AWS CLI. You can get started in minutes and no longer have to spend the time to install local applications or configure your development machine.</p>
+
+<p>For this lab, you create and use a Cloud9 instance for this lab. All of the steps for this lab are completed in this section for working with Docker containers.</p>
+<ol start="5">
+<li><p>In the AWS Management Console, on the Services menu, click <strong>Cloud 9</strong>. If the screen you see next starts with <strong>Region Unsupported</strong>, click on the closest region to your location supported from the list of <strong>Supported Regions</strong> and continue with the next steps. If you are in doubt, use US East (N. Virginia).</p></li>
+<li><p>On the Services menu, click <strong>Cloud9</strong>.</p></li>
+<li><p>Click <strong>Create environment</strong>.</p></li>
+</ol>
+<p><img src="http://us-west-2-tcprod.s3.amazonaws.com/courses/ILT-TF-100-DODEVA/v3.0.2/lab-6-docker/scripts/cloud9-create.PNG" alt="Cloud9 Create"></p>
+<ol start="8">
+<li><p>On the <strong>Name environment</strong> page, for <strong>Name</strong>, enter: <input readonly class="copyable-inline-input" size="6" type="text" value="Docker"></p></li>
+<li><p>Click <strong>Next step</strong>.</p></li>
+<li>
+<p>On the <strong>Configure settings</strong> page, make the following changes:</p>
+<ul>
+<li>For <strong>Environment type</strong>, select <strong>Create a new instance for environment (EC2)</strong>.</li>
+<li>For <strong>Instance type</strong>, select <strong>t2.small (2 GiB RAM + 1 vCPU)</strong>.</li>
+</ul>
+</li>
+</ol>
+<p>Since you will run a Docker container within that instance, more RAM will is preferrable. Due to this, the t2.small instance type is selected.</p>
+
+<p><img src="http://us-west-2-tcprod.s3.amazonaws.com/courses/ILT-TF-100-DODEVA/v3.0.2/lab-6-docker/scripts/cloud9-settings.png" alt="Cloud9 Environment Settings"></p>
+<ol start="11">
+<li><p>Leave the remaining settings as default and click <strong>Next step</strong>.</p></li>
+<li><p>Review the settings and click <strong>Create environment</strong>.</p></li>
+</ol>
+<p>It should take around two minutes for the environment to be created. Wait for it to complete. Once it's ready, you will be connected to your new Cloud9 environment.</p>
+
+<p><img src="http://us-west-2-tcprod.s3.amazonaws.com/courses/ILT-TF-100-DODEVA/v3.0.2/lab-6-docker/scripts/cloud9-int.png" alt="Cloud9"></p>
+<ol start="13">
+<li>The Cloud9 deployment creates an EC2 instance in your account. You will need to modify the Security Group (firewall) for that EC2 instance to allow you to test the application that you will deploy. Make sure that you take note of the Public IP address of that EC2 instance to do that test.</li>
+</ol>
+<p>To modify the Security Group, you need to go back to the AWS Management Console. In Cloud9, to return to the AWS Management Console, complete the following steps:</p>
+<ul>
+<li> At the top, you should see the Cloud9 menu bar.</li>
+</ul>
+<p><img src="http://us-west-2-tcprod.s3.amazonaws.com/courses/ILT-TF-100-DODEVA/v3.0.2/lab-6-docker/scripts/cloud9-bar.PNG" alt="Cloud9 Bar"></p>
+
+<p><strong>Hint</strong> If you do not see the menu bar, it might be hidden. Click at the top of the Cloud9 environment to unhide the menu bar.</p>
+<ul>
+<li> Click <strong>AWS Cloud 9 -&gt; Go To Your Dashboard</strong>.</li>
+<li> On the Services menu, click <strong>EC2</strong>.</li>
+</ul><ol start="14">
+<li><p>In the left navigation menu, click <strong>Instances</strong>. You should see an instance with a name that starts with <input readonly class="copyable-inline-input" size="21" type="text" value="aws-cloud9-Docker-...">. If you don't see that instance, you are currently in the wrong region. Select the same region that you selected when you had to create your Cloud9 environment.</p></li>
+<li><p>Click <strong>aws-cloud9-Docker-...</strong>.</p></li>
+<li><p>In the lower section, take note of the <strong>IPv4 Public IP</strong> and save it for future use.</p></li>
+<li><p>Scroll down and click the name of the <strong>Security groups</strong> which should start with <input readonly class="copyable-inline-input" size="21" type="text" value="aws-cloud9-Docker-...">. This will take you to the Security Group section of the EC2 Management Console.</p></li>
+<li><p>Click the <strong>Inbound</strong> tab.</p></li>
+<li><p>Click <strong>Edit</strong>.</p></li>
+<li><p>Click <strong>Add Rule</strong> and input the following:</p></li>
+</ol><ul>
+<li>For <strong>Type</strong>, select <input readonly class="copyable-inline-input" size="4" type="text" value="HTTP">.</li>
+<li>For <strong>Source</strong>, select <input readonly class="copyable-inline-input" size="8" type="text" value="Anywhere">.</li>
+</ul>
+<p>The other settings will be automatically populated for you.</p>
+<ol start="21">
+<li><p>Click <strong>Save</strong>.</p></li>
+<li><p>Go back to the Cloud9 Environment. If you have lost this tab in your browser, you can go back by navigating to the AWS Management Console. On the Services menu, click <strong>Cloud9</strong>, and then, click <strong>Open IDE</strong> in the square of Docker.</p></li>
+<li><p>At the botton of the screen, you will see the <strong>bash</strong> terminal. You can use this terminal to complete the steps in the lab.</p></li>
+</ol>
+<p>Keep in mind, you will be using the Cloud9 instance to complete this lab. You are not using it to connect to the remote Linux instance.</p>
+
+<h2 id='step3'>Cloud9 Task 2: Creating a Docker Image</h2>
+
+<p>Docker is already installed on the Cloud9 EC2 instance. You can verify that Docker is installed and see the version information.</p>
+
+<p>The next step is to create your Docker image.</p>
+<ol start="24">
+<li>To verify that Docker is installed, enter the following command:</li>
+</ol><pre class="highlight plaintext"><code>docker -v&#x000A;</code></pre>
+<p>You should see a response similar to the following:</p>
+
+<p><em>Docker version 18.03.1-ce, build 3dfb8343b139d6342acfd9975d7f1068b5b1c3d3</em></p>
+<ol start="25">
+<li>To make a directory called 'webapp' and change directory into it, enter the following command:</li>
+</ol><pre class="highlight plaintext"><code>mkdir webapp &amp;&amp; cd ./webapp&#x000A;</code></pre><ol start="26">
+<li>To download a static website from S3, enter the following command:</li>
+</ol><pre class="highlight plaintext"><code>wget http://us-west-2-tcprod.s3.amazonaws.com/courses/ILT-TF-100-DODEVA/v3.0.2/lab-6-docker/scripts/website.zip&#x000A;</code></pre><ol start="27">
+<li>Enter the following command to unzip your static website:</li>
+</ol><pre class="highlight plaintext"><code>unzip website.zip &amp;&amp; rm -f website.zip&#x000A;</code></pre><ol start="28">
+<li>Enter the following command to change back into the parent directory:</li>
+</ol><pre class="highlight plaintext"><code>cd ..&#x000A;</code></pre><ol start="29">
+<li>To create a new dockerfile, you will use the Cloud9 IDE. In the Cloud9 menu bar, click <strong>File -&gt; New File</strong> and enter the following into the new <strong>Untitled1</strong> tab that just opened.</li>
+</ol><pre class="highlight plaintext"><code>FROM ubuntu&#x000A;&#x000A;# Install apache and remove the list of packages downloaded from apt-get update&#x000A;RUN apt-get update -y &amp;&amp; \&#x000A;apt-get install -y apache2 &amp;&amp; \&#x000A;rm -r /var/lib/apt/lists/*&#x000A;&#x000A;# Copy the website into the apache web root directory&#x000A;COPY webapp /var/www/html&#x000A;&#x000A;EXPOSE 80&#x000A;&#x000A;CMD ["apachectl", "-D", "FOREGROUND"]&#x000A;</code></pre>
+<p>This is an example of a Dockerfile. Your dockerfile does the following:</p>
+<ul>
+<li>Downloads the image ubuntu from an image repository.</li>
+<li>Installs apache and removes the packages downloaded from apt-get update.</li>
+<li>Copies your web application into the image.</li>
+<li>Exposes tcp/80 to allow HTTP connections inbound.</li>
+<li>Starts apache.</li>
+</ul><ol start="30">
+<li><p>To save the file, click <strong>File -&gt; Save</strong>. For <strong>Filename</strong>, enter: <input readonly class="copyable-inline-input" size="10" type="text" value="dockerfile"> and click <strong>Save</strong>.</p></li>
+<li><p>The next step is to build an image for your application. Go back to the bash terminal. To build an image, enter the following command (make sure to copy the whole command including the '.' )</p></li>
+</ol><pre class="highlight plaintext"><code>docker build -t webapp-image .&#x000A;</code></pre>
+<p>This command builds an image from a Dockerfile located in '.' (the current directory). Then, it will tag the image with a name <em>webapp</em>.</p>
+<ol start="32">
+<li>You should now have a Docker image. You can verify your image by entering the following command:</li>
+</ol><pre class="highlight plaintext"><code>docker images&#x000A;</code></pre>
+<p>This command should return the following:</p>
+
+<p><img src="http://us-west-2-tcprod.s3.amazonaws.com/courses/ILT-TF-100-DODEVA/v3.0.2/lab-6-docker/scripts/docker-images.png" alt="Docker Images"></p>
+
+<p>You should see a couple of docker images listed.</p>
+
+
+
+<h2 id='step4'>Cloud9 Task 3: Running a Docker Container</h2>
+
+<p>In this section, you will launch a container from the Docker image that you built.</p>
+<ol start="33">
+<li>To launch a container, enter the following command:</li>
+</ol><pre class="highlight plaintext"><code>docker run --name webapp -d -p 80:80 webapp-image&#x000A;</code></pre>
+<p>This command requests Docker to run a container, with the name <em>webapp</em>, in daemon mode (non-interactive) and map tcp/80 outside the container to tcp/80 on the inside of the container.</p>
+<ol start="34">
+<li>To see if you container is running, enter the following command:</li>
+</ol><pre class="highlight plaintext"><code>docker ps -a&#x000A;</code></pre><ol start="35">
+<li>Next, you will test the website. To do this, use the <strong>IPv4 Public IP</strong> that you noted earlier and paste it into a web browser.</li>
+</ol>
+<p>For example: <strong>http://&lt;PublicIpAddress&gt;</strong></p>
+
+<p>You should see a web page similar to the following:</p>
+
+<p><img src="http://us-west-2-tcprod.s3.amazonaws.com/courses/ILT-TF-100-DODEVA/v3.0.2/lab-6-docker/scripts/app-view.PNG" alt="App View"></p>
+
+<p><strong>Congratulations! You have launched your first container.</strong></p>
+
+
+
+<h2 id='step5'>Cloud9 Task 4: Interacting with your Docker Container</h2>
+
+<p>In this section, you use various commands to interact with your Docker container.</p>
+<ol start="36">
+<li><p>Go back to your Cloud9 environment if you are not already on Cloud9.</p></li>
+<li><p>Open a bash prompt on your running container by using the following command:</p></li>
+</ol><pre class="highlight plaintext"><code>docker exec -i -t webapp /bin/bash&#x000A;</code></pre>
+<p>The <strong>docker exec</strong> command runs a new command in a running container. The flag <em>i</em> makes it interactive by redirecting the STDIN.</p>
+
+<p>You should now be logged into your container. For troubleshooting, this is as great as you can get it! The prompt will look like the following:  </p>
+
+<p><strong>root@container-id:/#</strong></p>
+<ol start="38">
+<li>Try taking a look at the file system. Look at the <em>/var/www/html</em> folder to see that your webapp code is now in it. Enter the following command:</li>
+</ol><pre class="highlight plaintext"><code>ls /var/www/html&#x000A;</code></pre><ol start="39">
+<li><p>To exit from your container, type <strong>exit</strong> and press enter.</p></li>
+<li><p>To view your running containers, enter the following command:</p></li>
+</ol><pre class="highlight plaintext"><code>docker ps -a&#x000A;</code></pre>
+<p><strong>Note</strong> Take note of your <em>container id</em>. You can use the container id to start and stop your containers.</p>
+<ol start="41">
+<li>To stop your container, you can simply enter:</li>
+</ol><pre class="highlight plaintext"><code>docker stop &lt;container-id&gt;&#x000A;</code></pre>
+<p>or</p>
+<pre class="highlight plaintext"><code>docker stop &lt;name&gt;&#x000A;</code></pre>
+<p>For example, if your container-id is <em>4b6c759654cd</em> and the name is <em>webapp</em>, you could stop your container using any of the following commands:</p>
+<pre class="highlight plaintext"><code>docker stop webapp&#x000A;</code></pre>
+<p>or</p>
+<pre class="highlight plaintext"><code>docker stop 4b6c759654cd&#x000A;</code></pre>
+<p>or</p>
+<pre class="highlight plaintext"><code>docker stop 4b&#x000A;</code></pre>
+<p><strong>Note</strong> The last command works because Docker can see that there is only one container running that has a container id starting with '4b'. This can be useful and faster than using the entire id, particularly for testing.</p>
+<ol start="42">
+<li>Start your container again. To start the container, enter the following command:</li>
+</ol><pre class="highlight plaintext"><code>docker start webapp&#x000A;</code></pre><ol start="43">
+<li>Next, view the logs for your container. To view your container logs, enter the following command:</li>
+</ol><pre class="highlight plaintext"><code>docker logs webapp&#x000A;</code></pre>
+<p>This is only to show you that you can see the logs of apache. No need to be worried by the logs you are seeing as you already know that your container works when you tested it using your browser in the previous task.</p>
+<ol start="44">
+<li>List the port mappings for your container. To list the port mappings, enter the following command:</li>
+</ol><pre class="highlight plaintext"><code>docker port webapp&#x000A;</code></pre>
+<p>This should return the following: <em>80/tcp -&gt; 0.0.0.0:80</em>       </p>
+
+
+
+<h2 id='step6'>Cloud9 Task 5: Creating an ECR Repository and Pushing Your Image</h2>
+
+<p>Now that you have an image, the next step a Developer would normally do is to send the image into a repository.</p>
+
+<p>In this section, you will be using ECR as your private repository. You will:</p>
+<ul>
+<li>Create a repository.</li>
+<li>Tag your image with that new repository.</li>
+<li>Authenticate the docker client to your ECR repository.</li>
+<li>Push your image in that repository.</li>
+</ul><ol start="45">
+<li>The first step is to create the ECR repository called 'webapp'. To create the repository, enter the following command:</li>
+</ol><pre class="highlight plaintext"><code>aws ecr create-repository --repository-name webapp&#x000A;</code></pre>
+<p>The return value should be similar to the following:</p>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">&#x000A;    </span><span class="s2">"repository"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">&#x000A;        </span><span class="s2">"registryId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"012345678901"</span><span class="p">,</span><span class="w">&#x000A;        </span><span class="s2">"repositoryName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webapp"</span><span class="p">,</span><span class="w">&#x000A;        </span><span class="s2">"repositoryArn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"arn:aws:ecr:us-east-1:012345678901:repository/webapp"</span><span class="p">,</span><span class="w">&#x000A;        </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="mf">1533951996.0</span><span class="p">,</span><span class="w">&#x000A;        </span><span class="s2">"repositoryUri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"012345678901.dkr.ecr.us-east-1.amazonaws.com/webapp"</span><span class="w">&#x000A;    </span><span class="p">}</span><span class="w">&#x000A;</span><span class="p">}</span><span class="w">&#x000A;</span></code></pre>
+<p>Take note of the <strong>repositoryUri</strong> without the double-quotes as you will use it in the following steps. In this example, the repositoryUri to use in the following steps would be: <em>012345678901.dkr.ecr.us-east-1.amazonaws.com/webapp</em></p>
+<ol start="46">
+<li>Next, tag the webapp-image ECR repository that you have just created. To tag the image, enter the following command:</li>
+</ol><pre class="highlight plaintext"><code>docker tag webapp-image change_me-repositoryUri&#x000A;</code></pre>
+<p>You will need to replace <strong>change_me-repositoryUri</strong> with the <strong>repositoryUri</strong> that you noted in a previous step.</p>
+<ol start="47">
+<li>To be able to do a push into ECR, the first step is to authenticate the docker client. AWS created an AWS CLI command, <em>aws ecr get-login</em>, to simplify this process which returns the <em>docker login -u ...</em> command. Instead of having you copy the return statement and paste it back, you will run the command by using <em>eval</em> which will execute the command returned by <em>aws ecr get-login</em>.</li>
+</ol>
+<p>To authenticate the <em>docker</em> client, enter the following command:</p>
+<pre class="highlight plaintext"><code>eval $(aws ecr get-login --no-include-email)&#x000A;</code></pre>
+<p>The output should indicate <em>Login Succeeded</em>. You can ignore the Warning as using the <em>eval</em> command allowed you to not paste the password on standard input and to be visible in the history.</p>
+<ol start="48">
+<li>Now that you are logged in, you can push the image into the ECR repository. To push the image, enter the following command:</li>
+</ol><pre class="highlight plaintext"><code>docker push change_me-repositoryUri&#x000A;</code></pre>
+<p>You will need to replace <strong>change_me-repositoryUri</strong> with the <strong>repositoryUri</strong> you noted in a previous step.</p>
+
+<p>The output of this command should look similar to the following:</p>
+<pre class="highlight plaintext"><code>The push refers to repository [012345678901.dkr.ecr.us-east-1.amazonaws.com/webapp]&#x000A;2fc92baef76f: Pushed&#x000A;9d66cbb6a6ab: Pushed&#x000A;268a067217b5: Pushed&#x000A;c01d74f99de4: Pushed&#x000A;ccd4d61916aa: Pushed&#x000A;8f2b771487e9: Pushed&#x000A;f49017d4d5ce: Pushed&#x000A;latest: digest: sha256:d5f7beae13aed16d307629a943f3d687ae30e437db3ee3cf4a565672d2b39bd2 size: 1779&#x000A;</code></pre>
+<p>Congratulations! You have successfully created an ECR Repository and pushed your image to it.</p>
+
+
+
+<h3>Cloud9 Completing the Lab</h3>
+
+<p>You have completed the main tasks for this lab! Complete the following steps to clean up your lab environment and to notify your instructor that your lab is complete.</p>
+<ol start="49">
+<li>To sign out of the AWS Management Console, click <strong>awsstudent</strong>  at the top of the console, and then click <strong>Sign Out</strong> .</li>
+<li>On the Qwiklabs page, click <strong>End Lab</strong>.</li>
+<li>Make sure to close your Cloud9 environment.</li>
+</ol>
+<p>Congratulations! You have successfully created and interacted with Docker containers by using AWS Cloud 9.</p>
+
+<h2 id='step7'>Cloud9 End of Lab</h2>
+
+
+
+<p><a id="connecting_linux"></a></p>
+
+<h2 id='step8'>Completing the Lab By Connecting to Your Amazon EC2 Linux Instance</h2>
+
+<p>For this lab, you connect to an Amazon EC2 Linux instance for this lab. All of the steps for this lab are completed in this section for working with Docker containers.</p>
+
+<p>The first step is to connect to your Linux Dev instance. On the Linux EC2 instance, you will also have access to Vi and Nano text editors. To connect to the Linux EC2 instance, see the following directions:</p>
+<ul>
+<li><a href="#connect_linux_win">Connect to Linux Dev Instance from a Windows Machine</a></li>
+<li><a href="#connect_linux_mac">Connect to Linux Dev Instance from a macOs Machine</a></li>
+</ul>
+<p><a id="connect_linux_win"></a>
+<strong>Connect to Linux Dev Instance from a Windows Machine</strong></p>
+
+<p>Access to the Dev Linux instance that is used in your labs requires a secure connection by using an SSH client. The following instructions walk through the process of connecting to Amazon EC2 Linux instances.</p>
+
+<p><strong>Note</strong>: Perform the steps in this task only if you are connecting to <strong>Linux Dev Instance</strong> from a Windows machine.</p>
+<ol start="52">
+<li><p>In the <strong>Connection Details</strong> section in Qwiklabs, under <strong>EC2 Key Pair Private Key</strong>, to connect to Amazon EC2 Linux click <strong>Download PPK</strong> .</p></li>
+<li><p>Go to the bottom of the <strong>Connection Details</strong> section in Qwiklabs. Copy the <strong>LinuxInstanceIP</strong> to the clipboard.</p></li>
+<li><p>If it is not already installed, download the <em>PuTTY.exe</em> client to a folder of your choice from the following URL: <a href="http://www.chiark.greenend.org.uk/%7Esgtatham/putty/download.html" target="_blank"><input readonly class="copyable-inline-input" size="63" type="text" value="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html"></a></p></li>
+<li><p>Open <em>PuTTY.exe</em>.</p></li>
+<li><p>In the <em>Basic options for your PuTTY Session</em> pane, for <em>Host Name (or IP address)</em>*, type <input readonly class="copyable-inline-input" size="21" type="text" value="ec2-user@&lt;public-dns&gt;">, where <input readonly class="copyable-inline-input" size="12" type="text" value="&lt;public-dns&gt;"> is the Public DNS address of your Amazon EC2 instance that you copied earlier.</p></li>
+</ol>
+<p>This will log you in to the remote server as the user <input readonly class="copyable-inline-input" size="8" type="text" value="ec2-user">, which is the default user on Amazon Linux on EC2.</p>
+
+<p><img src="http://us-west-2-tcprod.s3.amazonaws.com/courses/ILT-TF-100-DODEVA/v3.0.2/lab-6-docker/scripts/putty-session.png" alt="Putty Session Screenshot"></p>
+<ol start="57">
+<li>In the left navigation menu, click <strong>Connection</strong>.</li>
+<li>Set the following options to keep your SSH connection active as you complete the lab:</li>
+</ol><ul>
+<li>For <strong>Seconds between keepalives (0 to turn off)</strong>, <strong>set the value</strong> to <input readonly class="copyable-inline-input" size="2" type="text" value="50">.</li>
+<li>For <strong>Enable TCP keepalives (SO_KEEPALIVE option)</strong>, enable the checkbox.</li>
+</ul>
+<p><img src="http://us-west-2-tcprod.s3.amazonaws.com/courses/ILT-TF-100-DODEVA/v3.0.2/lab-6-docker/scripts/putty-keepalive.jpg" alt="Putty Keepalive Screenshot"></p>
+<ol start="59">
+<li>In the left navigation menu, click <strong>Connection -&gt; SSH -&gt; Auth</strong>.</li>
+<li>Click <strong>Browse</strong> in the section for <strong>Private key file for authentication</strong>.</li>
+</ol>
+<p><img src="http://us-west-2-tcprod.s3.amazonaws.com/courses/ILT-TF-100-DODEVA/v3.0.2/lab-6-docker/scripts/putty-auth.png" alt="Putty Auth Screenshot"></p>
+<ol start="61">
+<li>Select the PPK file you downloaded earlier and then, click <strong>Open</strong>.</li>
+</ol>
+<p>This file is usually located in the <em>Downloads</em> folder on your PC.</p>
+<ol start="62">
+<li>Click <strong>Open</strong> to initiate the remote session.</li>
+<li>PuTTY will ask whether you wish to cache the server's host key. Click <strong>Yes</strong>.</li>
+</ol>
+<p><strong>Result</strong></p>
+
+<p>You are now connected to <strong>Linux Dev Instance</strong>. When lab instructions in subsequent sections require a command window, continue using your SSH terminal window.</p>
+
+<p>To continue this lab, move on to <a href="#create_docker">Task 2-Linux: Creating a Docker Image</a>.</p>
+
+<p><a id="connect_linux_mac"></a>
+<strong>Connect to Linux Dev Instance from a Linux or macOS Machine</strong></p>
+
+<p>In this section, you will connect to a Linux EC2 instance from your Linux or macOS machine using SSH.</p>
+
+<p><strong>Note</strong> Perform the steps in this task only if you are connecting to <strong>Linux Dev Instance</strong> from a Linux or macOS machine.</p>
+<ol start="64">
+<li><p>In the <strong>Connection Details</strong> section in Qwiklabs, under <strong>EC2 Key Pair Private Key</strong>, to connect to Amazon EC2 Linux click <strong>Download PEM</strong> .</p></li>
+<li><p>Go to the bottom of the <strong>Connection Details</strong> section in Qwiklabs. Copy the <strong>LinuxInstanceIP</strong> to the clipboard.</p></li>
+<li><p>Open the <strong>Terminal</strong> application.</p></li>
+</ol>
+<p>Complete the remaining connection steps in the terminal window.</p>
+<ol start="67">
+<li>Change directory to the folder where the PEM fille has been downloaded (ie <input readonly class="copyable-inline-input" size="14" type="text" value="cd ~/Downloads">)</li>
+<li>Change the permissions on the PEM file using the command below.</li>
+</ol>
+<p><strong>Replace</strong> <input readonly class="copyable-inline-input" size="10" type="text" value="&lt;pem-file&gt;"> with the name of the PEM file you downloaded.</p>
+<pre class="highlight plaintext"><code>chmod 400 &lt;pem-file&gt;&#x000A;</code></pre><ol start="69">
+<li>Use the command below to log in to the remote instance as user <input readonly class="copyable-inline-input" size="8" type="text" value="ec2-user">.</li>
+</ol>
+<p><strong>Replace</strong> <input readonly class="copyable-inline-input" size="10" type="text" value="&lt;pem-file&gt;"> with the name of the PEM file you downloaded and <strong>replace</strong> <input readonly class="copyable-inline-input" size="12" type="text" value="&lt;public-dns&gt;"> with the Public DNS address of your EC2 instance.</p>
+<pre class="highlight plaintext"><code>ssh -i &lt;pem-file&gt; ec2-user@&lt;public-dns&gt;&#x000A;</code></pre>
+<p><strong>Result</strong></p>
+
+<p>You are now connected to <strong>Linux Dev Instance</strong>. When lab instructions in subsequent sections require a command window, continue using your SSH terminal window.</p>
+
+<p>To continue this lab, move on to <a href="#create_docker">Task 2-Linux: Creating a Docker Image</a>.</p>
+
+<p><a id="create_docker"></a></p>
+
+
+
+<h2 id='step9'>Linux Task 2: Creating a Docker Image</h2>
+
+<p>Docker is already installed on the EC2 instance. You can verify that Docker is installed and see the version information.</p>
+
+<p>Now, the next step is to create your first Docker image.</p>
+<ol start="70">
+<li>To verify that Docker is installed, enter the following command:</li>
+</ol><pre class="highlight plaintext"><code>docker -v&#x000A;</code></pre>
+<p>You should see a response similar to the following:</p>
+
+<p><em>Docker version 18.03.1-ce, build 3dfb8343b139d6342acfd9975d7f1068b5b1c3d3</em></p>
+<ol start="71">
+<li>To create your Docker image, enter the following commands:</li>
+</ol><ul>
+<li>Make a directory called 'webapp' and change into it:</li>
+</ul><pre class="highlight plaintext"><code>mkdir webapp &amp;&amp; cd ./webapp&#x000A;</code></pre><ul>
+<li>Download a static website from S3:</li>
+</ul><pre class="highlight plaintext"><code>wget http://us-west-2-tcprod.s3.amazonaws.com/courses/ILT-TF-100-DODEVA/v3.0.2/lab-6-docker/scripts/website.zip&#x000A;</code></pre><ul>
+<li>Unzip your static website:</li>
+</ul><pre class="highlight plaintext"><code>unzip website.zip &amp;&amp; rm -f website.zip&#x000A;</code></pre><ul>
+<li>Change back into the parent directory:</li>
+</ul><pre class="highlight plaintext"><code>cd ..&#x000A;</code></pre><ul>
+<li>Create a new Dockerfile by using nano. To create the file, enter the following command:</li>
+</ul><pre class="highlight plaintext"><code>nano dockerfile&#x000A;</code></pre>
+<p><strong>Note</strong> You can use any editor of choice, such as vi.</p>
+<ul>
+<li>Copy and paste the following into your dockerfile:</li>
+</ul><pre class="highlight plaintext"><code>FROM ubuntu&#x000A;&#x000A;# Install apache and remove the list of packages downloaded from apt-get update&#x000A;RUN apt-get update -y &amp;&amp; \&#x000A;apt-get install -y apache2 &amp;&amp; \&#x000A;rm -r /var/lib/apt/lists/*&#x000A;&#x000A;# Copy the website into the apache web root directory&#x000A;COPY webapp /var/www/html&#x000A;&#x000A;EXPOSE 80&#x000A;&#x000A;CMD ["apachectl", "-D", "FOREGROUND"]&#x000A;</code></pre><ul>
+<li>
+<strong>Save</strong> your file and quit the editor.</li>
+</ul>
+<p>This is an example of a Dockerfile. Your dockerfile does the following:</p>
+<ul>
+<li>Downloads the image ubuntu from an image repository.</li>
+<li>Installs apache and removes the packages downloaded from apt-get update.</li>
+<li>Copies your web application into the image.</li>
+<li>Exposes tcp/80 to allow HTTP connections inbound.</li>
+<li>Starts apache.</li>
+</ul><ol start="72">
+<li>The next step is to build an image for your application. To build an image, enter the following command:</li>
+</ol><pre class="highlight plaintext"><code>docker build -t webapp-image .&#x000A;</code></pre>
+<p>This command builds an image from a Dockerfile located in '.' (the current directory). Then, it will tag the image with a name <em>webapp</em>.</p>
+<ol start="73">
+<li>You should now have a Docker image. You can verify your image by entering the following command:</li>
+</ol><pre class="highlight plaintext"><code>docker images&#x000A;</code></pre>
+<p>You should a list showing a couple of images.</p>
+
+
+
+<h2 id='step10'>Linux Task 3: Running a Docker Container</h2>
+
+<p>In this section, you will launch a container from the Docker image that you built.</p>
+<ol start="74">
+<li>To launch a container, enter the following command:</li>
+</ol><pre class="highlight plaintext"><code>docker run --name webapp -d -p 80:80 webapp-image&#x000A;</code></pre>
+<p>This command requests Docker to run a container, with the name <em>webapp</em>, in daemon mode (non-interactive) and map tcp/80 outside the container to tcp/80 on the inside of the container.</p>
+<ol start="75">
+<li>To see if you container is running, enter the following command:</li>
+</ol><pre class="highlight plaintext"><code>docker ps -a&#x000A;</code></pre><ol start="76">
+<li>Next, you will need to test the website. To do this, go to the bottom of the <strong>Connection Details</strong> section in Qwiklabs. Copy the <strong>LinuxInstanceIP</strong> to the clipboard and paste it into a web browser.</li>
+</ol>
+<p>For example: <strong><a href="http://xxx.xxx.xxx.xxx" target="_blank">http://xxx.xxx.xxx.xxx</a></strong></p>
+
+<p>You should see a web page similar to the following:</p>
+
+<p><img src="http://us-west-2-tcprod.s3.amazonaws.com/courses/ILT-TF-100-DODEVA/v3.0.2/lab-6-docker/scripts/app-view.PNG" alt="App View"></p>
+
+<p><strong>Congratulations! You have launched your first container.</strong></p>
+
+
+
+<h2 id='step11'>Linux Task 4: Interacting with your Docker Container</h2>
+
+<p>In this section, you use various commands to interact with your Docker container.</p>
+<ol start="77">
+<li>Open a bash prompt on your running container by using the following command:</li>
+</ol><pre class="highlight plaintext"><code>docker exec -i -t webapp /bin/bash&#x000A;</code></pre>
+<p>The <strong>docker exec</strong> command runs a new command in a running container. The flag <em>i</em> makes it interactive by redirecting the STDIN.</p>
+
+<p>You should now be logged into your container. For troubleshooting, this is as great as you can get it! The prompt will look like the following:  </p>
+
+<p><strong>root@container-id:/#</strong></p>
+<ol start="78">
+<li>Look at the <em>/var/www/html</em> folder to see that your webapp code is now in it. Enter the following command:</li>
+</ol><pre class="highlight plaintext"><code>ls /var/www/html&#x000A;</code></pre><ol start="79">
+<li><p>To exit from your container, type <strong>exit</strong> and press enter.</p></li>
+<li><p>To view your running containers, enter the following command:</p></li>
+</ol><pre class="highlight plaintext"><code>docker ps -a&#x000A;</code></pre>
+<p><strong>Note</strong> Take note of your <em>container id</em>. You can use the container id to start and stop your containers.</p>
+<ol start="81">
+<li>To stop your container, you can simply enter:</li>
+</ol><pre class="highlight plaintext"><code>docker stop &lt;container-id&gt;&#x000A;</code></pre>
+<p>or</p>
+<pre class="highlight plaintext"><code>docker stop &lt;name&gt;&#x000A;</code></pre>
+<p>For example, if your container-id is <em>4b6c759654cd</em> and the name is <em>webapp</em>, you could stop your container using any of the following commands:</p>
+<pre class="highlight plaintext"><code>docker stop webapp&#x000A;</code></pre>
+<p>or</p>
+<pre class="highlight plaintext"><code>docker stop 4b6c759654cd&#x000A;</code></pre>
+<p>or</p>
+<pre class="highlight plaintext"><code>docker stop 4b&#x000A;</code></pre>
+<p><strong>Note</strong> The last command works because Docker can see that there is only one container running that has a container id starting with '4b'. This can be useful and faster than using the entire id, particularly for testing.</p>
+<ol start="82">
+<li>Start your container again. To start the container, enter the following command:</li>
+</ol><pre class="highlight plaintext"><code>docker start webapp&#x000A;</code></pre><ol start="83">
+<li>Next, view the logs for your container. To view your container logs, enter the following command:</li>
+</ol><pre class="highlight plaintext"><code>docker logs webapp&#x000A;</code></pre>
+<p>This is only to show you that you can see the logs of apache. No need to be worried by the logs you are seeing as you already know that your container works when you tested it using your browser in the previous task.</p>
+<ol start="84">
+<li>List the port mappings for your container. To list the port mappings, enter the following command:</li>
+</ol><pre class="highlight plaintext"><code>docker port webapp&#x000A;</code></pre>
+<p>This should return the following: <em>80/tcp -&gt; 0.0.0.0:80</em></p>
+
+<p>Congratulations! You have successfully created and interacted with Docker containers.</p>
+
+
+
+<h2 id='step12'>Linux Task 5: Creating an ECR Repository and Pushing Your Image</h2>
+
+<p>Now that you have an image, the next step a Developer would normally do is to send the image into a repository.</p>
+
+<p>In this section, you will be using ECR as your private repository. You will:</p>
+<ul>
+<li>Create a repository.</li>
+<li>Tag your image with that new repository.</li>
+<li>Authenticate the docker client to your ECR repository.</li>
+<li>Push your image in that repository.</li>
+</ul><ol start="85">
+<li>The first step is to create the ECR repository called 'webapp'. To create the repository, enter the following command:</li>
+</ol><pre class="highlight plaintext"><code>aws ecr create-repository --repository-name webapp&#x000A;</code></pre>
+<p>The return value should be similar to the following:</p>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">&#x000A;    </span><span class="s2">"repository"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">&#x000A;        </span><span class="s2">"registryId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"012345678901"</span><span class="p">,</span><span class="w">&#x000A;        </span><span class="s2">"repositoryName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webapp"</span><span class="p">,</span><span class="w">&#x000A;        </span><span class="s2">"repositoryArn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"arn:aws:ecr:us-east-1:012345678901:repository/webapp"</span><span class="p">,</span><span class="w">&#x000A;        </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="mf">1533951996.0</span><span class="p">,</span><span class="w">&#x000A;        </span><span class="s2">"repositoryUri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"012345678901.dkr.ecr.us-east-1.amazonaws.com/webapp"</span><span class="w">&#x000A;    </span><span class="p">}</span><span class="w">&#x000A;</span><span class="p">}</span><span class="w">&#x000A;</span></code></pre>
+<p>Take note of the <strong>repositoryUri</strong> without the double-quotes as you will use it in the following steps. In this example, the repositoryUri to use in the following steps would be: <em>012345678901.dkr.ecr.us-east-1.amazonaws.com/webapp</em></p>
+<ol start="86">
+<li>Next, tag the webapp-image ECR repository that you have just created. To tag the image, enter the following command:</li>
+</ol><pre class="highlight plaintext"><code>docker tag webapp-image change_me-repositoryUri&#x000A;</code></pre>
+<p>You will need to replace <strong>change_me-repositoryUri</strong> with the <strong>repositoryUri</strong> that you noted in a previous step.</p>
+<ol start="87">
+<li>To be able to do a push into ECR, the first step is to authenticate the docker client. AWS created an AWS CLI command, <em>aws ecr get-login</em>, to simplify this process which returns the <em>docker login -u ...</em> command. Instead of having you copy the return statement and paste it back, you will run the command by using <em>eval</em> which will execute the command returned by <em>aws ecr get-login</em>.</li>
+</ol>
+<p>To authenticate the <em>docker</em> client, enter the following command:</p>
+<pre class="highlight plaintext"><code>eval $(aws ecr get-login --no-include-email)&#x000A;</code></pre>
+<p>The output should indicate <em>Login Succeeded</em>. You can ignore the Warning as using the <em>eval</em> command allowed you to not paste the password on standard input and to be visible in the history.</p>
+<ol start="88">
+<li>Now that you are logged in, you can push the image into the ECR repository. To push the image, enter the following command:</li>
+</ol><pre class="highlight plaintext"><code>docker push change_me-repositoryUri&#x000A;</code></pre>
+<p>You will need to replace <strong>change_me-repositoryUri</strong> with the <strong>repositoryUri</strong> you noted in a previous step.</p>
+
+<p>The output of this command should look similar to the following:</p>
+<pre class="highlight plaintext"><code>The push refers to repository [012345678901.dkr.ecr.us-east-1.amazonaws.com/webapp]&#x000A;2fc92baef76f: Pushed&#x000A;9d66cbb6a6ab: Pushed&#x000A;268a067217b5: Pushed&#x000A;c01d74f99de4: Pushed&#x000A;ccd4d61916aa: Pushed&#x000A;8f2b771487e9: Pushed&#x000A;f49017d4d5ce: Pushed&#x000A;latest: digest: sha256:d5f7beae13aed16d307629a943f3d687ae30e437db3ee3cf4a565672d2b39bd2 size: 1779&#x000A;</code></pre>
+<p>Congratulations! You have successfully created an ECR Repository and pushed your image to it.</p>
+
+<p>__</p>
+
+<h3>Linux Completing the Lab</h3>
+
+<p>You have completed the main tasks for this lab! Complete the following steps to clean up your lab environment and to notify your instructor that your lab is complete.</p>
+<ol start="89">
+<li>To sign out of the AWS Management Console, click <strong>awsstudent</strong>  at the top of the console, and then click <strong>Sign Out</strong> .</li>
+<li>On the Qwiklabs page, click <strong>End Lab</strong>.</li>
+</ol>
+<p>Congratulations! You are done!</p>
+
+<h2 id='step13'>Linux End of Lab</h2>
+
+</div>
+<div class='js-lab-content-outline lab-content__outline'>
+<a href='#step1'>Task 1: Connecting to Your Development Environment</a><a href='#step2'>Completing the Lab By Using AWS Cloud9</a><a href='#step3'>Cloud9 Task 2: Creating a Docker Image</a><a href='#step4'>Cloud9 Task 3: Running a Docker Container</a><a href='#step5'>Cloud9 Task 4: Interacting with your Docker Container</a><a href='#step6'>Cloud9 Task 5: Creating an ECR Repository and Pushing Your Image</a><a href='#step7'>Cloud9 End of Lab</a><a href='#step8'>Completing the Lab By Connecting to Your Amazon EC2 Linux Instance</a><a href='#step9'>Linux Task 2: Creating a Docker Image</a><a href='#step10'>Linux Task 3: Running a Docker Container</a><a href='#step11'>Linux Task 4: Interacting with your Docker Container</a><a href='#step12'>Linux Task 5: Creating an ECR Repository and Pushing Your Image</a><a href='#step13'>Linux End of Lab</a>
+</div>
+
+</div>
+
+
+</div>
+</div>
+<div class='lab-buttons'>
+<a class='mdl-button mdl-js-button mdl-button--fab mdl-button--large-fab mdl-js-ripple-effect mdl-button--accent mdl-shadow--8dp help-button' data-target='#lab-help-modal' data-toggle='modal'>
+<i class='material-icons'>help</i>
+</a>
+</div>
+<div class='lab-introduction js-lab-introduction is-hidden'>
+<div class='lab-introduction__inner'>
+<h1 class='headline-1'>Welcome to Your First Lab!</h1>
+<div class='lab-introduction__video'>
+<iframe allow='autoplay; encrypted-media' frameborder='0' id='lab-introduction' src='https://www.youtube.com/embed/yF7EDXKTmoQ?enablejsapi=1&amp;rel=0&amp;showinfo=0'></iframe>
+</div>
+<a class='button js-skip-button'>Skip</a>
+</div>
+</div>
+
+
+</div>
+</main>
+<div class='bottom-menu'>
+<a title="Home" class="side-menu__item js-navigation-button" href="/home"><div class='side-menu__item__icon'>
+<i class='material-icons'>home</i>
+</div>
+<div class='side-menu__item__label'>
+Home
+</div>
+</a>
+<a title="Catalog" class="side-menu__item js-navigation-button" href="/catalog"><div class='side-menu__item__icon'>
+<i class='material-icons'>school</i>
+</div>
+<div class='side-menu__item__label'>
+Catalog
+</div>
+</a>
+<a title="My Learning" class="side-menu__item js-navigation-button" href="/my_learning"><div class='side-menu__item__icon'>
+<i class='material-icons'>event_note</i>
+</div>
+<div class='side-menu__item__label'>
+My Learning
+</div>
+</a>
+<a class='side-menu__item js-side-menu-button'>
+<div class='side-menu__item__icon'>
+<i class='material-icons'>menu</i>
+</div>
+<span class='side-menu__item__tooltip'>More</span>
+<div class='side-menu__item__label'>
+More
+</div>
+</a>
+</div>
+
+<div class='modal fade' id='support-modal'>
+<div class='modal-container'>
+<div class='mdl-shadow--24dp modal-content'>
+<h4 class='modal-header'>How can we help you?</h4>
+<form action="/contact_support" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="/Vutw2v9gSc9gXlOU7B5MdLhP+LlYHh86sZiTHuwypX1+yCGO5TtmczUgUzsbAi/Cml9TOulXpHSLjnvr31MIw==" />
+<div class='modal-body'>
+<p class='l-mbl'>We will get back to you within 24 hours.</p>
+<div class='form-row'>
+<div class='control-group'>
+<label for="Question">Question</label>
+<input type="text" name="question" id="question" placeholder="Briefly describe your question" />
+</div>
+</div>
+<div class='form-row'>
+<div class='control-group'>
+<label for="Details">Details</label>
+<textarea name="description" id="description" rows="5" placeholder="Fill in the details here. Please try to be as specific as possible.&#x000A;">
+</textarea>
+</div>
+</div>
+<div class='form-row'>
+<div class='control-group'>
+<label for="Your_Name">Your name</label>
+<input type="text" name="name" id="name" value="Niruban Kandasamy" />
+</div>
+<div class='control-group'>
+<label for="Your_Email">Your email</label>
+<input type="text" name="email" id="email" value="niruban@gmail.com" />
+</div>
+</div>
+</div>
+<div class='modal-actions'>
+<a class='mdl-button mdl-button--cancel mdl-js-button mdl-js-ripple-effect l-mll' data-dismiss='modal'>
+Nevermind
+</a>
+<input type="submit" name="commit" value="Submit" class="mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect" data-disable-with="Submit" />
+</div>
+</form>
+
+
+
+</div>
+</div>
+<iframe class='l-ie-iframe-fix'></iframe>
+</div>
+<div class='modal fade' id='lab-help-modal'>
+<div class='modal-container'>
+<div class='mdl-shadow--24dp modal-content'>
+<h4 class='modal-header'>Get Help</h4>
+<form action="/contact_support" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="zFZoGKY6ynciSGT7gf+V7Kg4+tRUZvY0QI2b1+VCP4nE9uVd9lOmydMdnPk+I+RicLC4elqj0Nl4ZcB0MY+5Pw==" />
+<div class='modal-body'>
+<div class='control-group l-mbl'>
+<label for="Question">Question</label>
+<input type="text" name="question" id="question" placeholder="Briefly describe your question" />
+</div>
+<div class='control-group l-mbl'>
+<label for="Details">Details</label>
+<textarea name="description" id="description" rows="5" placeholder="Fill in the details here. Please try to be as specific as possible.&#x000A;">
+</textarea>
+</div>
+<div class='control-group l-mbl'>
+<label for="Your_Name">Your name</label>
+<input type="text" name="name" id="name" value="Niruban Kandasamy" />
+</div>
+<div class='control-group l-mbl'>
+<label for="Your_Email">Your email</label>
+<input type="text" name="email" id="email" value="niruban@gmail.com" />
+</div>
+<div class='control-group l-mbl'>
+<label for="Severity">Severity</label>
+<select name="severity" id="severity"><option value="0">-</option>
+<option value="severity_1">Severity 1 (Highest)</option>
+<option value="severity_2">Severity 2</option>
+<option value="severity_3">Severity 3</option>
+<option value="severity_4">Severity 4</option>
+<option value="severity_5">Severity 5 (Lowest)</option></select>
+</div>
+<div class='control-group'>
+<div class='control-label'></div>
+We will get back to you within 24 hours.
+</div>
+</div>
+<div class='modal-actions'>
+<a class='mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect' data-dismiss='modal'>
+Cancel
+</a>
+<input type="submit" name="commit" value="Submit" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary" data-disable-with="Submit" />
+</div>
+</form>
+
+
+
+</div>
+</div>
+<iframe class='l-ie-iframe-fix'></iframe>
+</div>
+<div class='modal fade' id='lab-details-modal'>
+<div class='modal-container'>
+<div class='mdl-shadow--24dp modal-content'>
+<div class='modal-body'>
+<p class='l-mbm'>
+Developing on AWS is a three-day instructor led course.
+</p>
+<p class='small-label l-mbs'>
+<strong>
+Duration:
+</strong>
+3m setup
+&middot;
+150m access
+&middot;
+150m completion
+</p>
+<p class='small-label l-mbs'>
+<strong>AWS Region:</strong>
+[us-west-2] <strong>US West (Oregon)</strong>
+</p>
+<p class='small-label l-mbs'>
+
+</p>
+<p class='small-label'>
+<strong>
+Permalink:
+</strong>
+<a href="https://exitcertified.qwiklabs.com/catalog_lab/1780">https://exitcertified.qwiklabs.com/catalog_lab/1780</a>
+</p>
+</div>
+<div class='modal-actions'>
+<a class='mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect' data-dismiss='modal'>
+Got It
+</a>
+</div>
+
+
+</div>
+</div>
+<iframe class='l-ie-iframe-fix'></iframe>
+</div>
+<div class='modal fade' id='lab-review-modal'>
+<div class='modal-container'>
+<div class='mdl-shadow--24dp modal-content'>
+<form class="simple_form js-lab-review-form" id="new_lab_review" action="/lab_reviews" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><div class='modal-body'>
+<p class='label'>
+How satisfied are you with this lab?
+</p>
+<div class='rateit js-rateit' data-rateit-max='5' data-rateit-min='0' data-rateit-resetable='false' data-rateit-step='1' data-rateit-value='0'></div>
+<div class='l-mtm'>
+
+<div class="control-group hidden lab_review_user_id"><div class="controls"><input class="hidden" type="hidden" value="12101" name="lab_review[user_id]" id="lab_review_user_id" /></div></div>
+<div class="control-group hidden lab_review_classroom_id"><div class="controls"><input class="hidden" type="hidden" value="1712" name="lab_review[classroom_id]" id="lab_review_classroom_id" /></div></div>
+<div class="control-group hidden lab_review_lab_id"><div class="controls"><input class="hidden" type="hidden" value="1780" name="lab_review[lab_id]" id="lab_review_lab_id" /></div></div>
+<div class="control-group hidden lab_review_focus_id"><div class="controls"><input class="hidden" type="hidden" value="11146" name="lab_review[focus_id]" id="lab_review_focus_id" /></div></div>
+<div class="control-group hidden lab_review_rating"><div class="controls"><input class="hidden js-rating-input" type="hidden" name="lab_review[rating]" id="lab_review_rating" /></div></div>
+<div class="control-group text optional lab_review_comment"><label class="text optional control-label" for="lab_review_comment">Comment</label><div class="controls"><textarea class="text optional" name="lab_review[comment]" id="lab_review_comment">
+</textarea></div></div>
+</div>
+</div>
+<div class='modal-actions'>
+<a class='mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect' data-dismiss='modal'>
+Cancel
+</a>
+<input type="submit" name="commit" value="Submit" class="btn mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary" data-disable-with="Submit" />
+</div>
+</form>
+
+</div>
+</div>
+<iframe class='l-ie-iframe-fix'></iframe>
+</div>
+
+<script>
+  $( function() {
+    ql.initMaterialInputs();
+    initChosen();
+    initSearch();
+    initTabs();
+    ql.list.init();
+    ql.favoriting.init();
+    ql.header.myAccount.init();
+    initTooltips();
+    ql.autocomplete.init();
+    ql.toolbar.init();
+    ql.modals.init();
+    initExperiments();
+    initLabContent( );
+  ql.labOutline.init("11146");
+  initLabReviewModal();
+  initLabAssessment();
+  initLabTranslations( {"are_you_sure":"All done? If you end this lab, you will lose all your work. You may not be able to restart the lab if there is a quota limit. Are you sure you want to end this lab?\n","in_progress":"*In Progress*","ending":"*Ending*","starting":"*Starting, please wait*","end_concurrent_labs":"Sorry, you can only run one lab at a time. To start this lab, please confirm that you want all of your existing labs to end.\n","copied":"Copied","no_resource":"Error retrieving resource.","no_support":"No Support","mac_press":"Press ⌘-C to copy","thanks_review":"Thanks for reviewing this lab.","windows_press":"Press Ctrl-C to copy","days":"days"} );
+  initLabRun();
+  ql.initHeader();
+  ql.sideMenu.init();
+  ql.navigation.init();
+  
+  });
+</script>
+</body>
+</html>
