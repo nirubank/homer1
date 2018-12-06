@@ -1,0 +1,7 @@
+﻿10:00:22	 From  Michelle Coppens : https://exitcertified.qwiklabs.com
+10:02:04	 From  Ken Krueger :: Instructor : http://tinyurl.com/dev-on-aws
+10:10:10	 From  Michelle Coppens : hello!
+10:11:10	 From  Ken Krueger :: Instructor : hola!
+10:13:41	 From  Michelle Coppens : If there’s anything we can be of assistance with, please feel free to reach out to us:E-Mail: imvp@exitcertified.comPhone: 844-275-4687 (844-ASK-iMVP)
+10:17:07	 From  Michelle Coppens : *LABS: https://exitcertified.qwiklabs.com
+16:23:51	 From  Ken Krueger :: Instructor : https://s3.amazonaws.com/kk-courses/aws-dev-3/aws-dev-v30.zip

@@ -1,0 +1,27 @@
+Pool Id us-west-2_AaTxLpOQe
+Pool ARN arn:aws:cognito-idp:us-west-2:596967500332:userpool/us-west-2_AaTxLpOQe
+
+Cognito App client id:  1hhqfeni60gio2aoopq5725ouv
+
+
+
+aws cognito-idp sign-up --client-id 1hhqfeni60gio2aoopq5725ouv --username student --password student
+student
+{
+    "UserConfirmed": false,
+    "UserSub": "b7893b3b-93b0-4cdf-9ff6-2c0398c9064a"
+}
+
+
+aws cognito-idp admin-confirm-sign-up --user-pool-id us-west-2_AaTxLpOQe --username student
+
+polly-notes-web-niruban-kandasamy
+polly-notes-mp3-niruban-kandasamy
+
+polly-notes-code-niruban-kandasamy
+
+
+https://106lmgwwxi.execute-api.us-west-2.amazonaws.com/prod
+
+
+https://polly-notes-mp3-niruban-kandasamy.s3.us-west-2.amazonaws.com/testuser/001.mp3?X-Amz-Security-Token=FQoGZXIvYXdzEAsaDGWi1skzqUNroZp0FiLzAQ3OXPS6V5Pad33MaVkYJGnODPd3M%2Bjl%2F0bAp43J6eTv3Um8s09N5zRmq6Kg2XbCDlMz1Nq5JMtwWseiDCAGGXd%2B1e22K0H%2B4EFYMGbexm4eMMWKOA8p2z9Tp%2BIivMo69CwUL8fEq1tocIUyNMN%2BiY3pS5Pur5UXvDoWUWQZrK7dDXJZ6woSPNJIyYOuGGQKvR6uql98Rr5XyehxJFSmJkj5XJ9kfGEkVUA1%2FctbptwoM2XkqVrpxr%2F7org4xeML6%2BahX%2BbGmMNlmD8rGkPOikJCxRjiqlkK0Mi5wOn9zdJ2M7QL%2B8gW%2FhrBaQXw%2B3ZAITYyECj1uKXgBQ%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20181206T172932Z&X-Amz-SignedHeaders=host&X-Amz-Expires=899&X-Amz-Credential=ASIAYV7QJFIWJY7BA5EJ%2F20181206%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Signature=d485650aa16df674056acffb81328794608b49c2ea1528f459043c61d6b7183bEND
