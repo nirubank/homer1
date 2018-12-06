@@ -1,0 +1,332 @@
+Welcome to Developing on AWS! (3.0)
+
+First...
+open this document: https://tinyurl.com/dev-on-awsand bookmark it.
+WATCH THIS SPACE FOR ANY EMERGENCY ANNOUNCEMENTS!
+
+Second, The Basics...
+Instructor:			Ken Krueger - ken.krueger@techdata.com	  
+Class start:			9:00 AM Central time
+Lunch:				12:00 - 13:00 (approx)
+End:				17:00
+Third, Log into Qwiklabs...
+Go to  https://exitcertified.qwiklab.com.  Do NOT use Internet Explorer.
+Register (if needed) using the same email used to sign up for this class.  See the following page to see the email address we have on file for you.
+Sign in.  We will come back to this page later today.
+Problems?  Can’t remember what email you used?  See below or email imvp@exitcertified.com 
+
+Fourth, Get the Books…
+Find https://evantage.gilmoreglobal.com .  Register.
+(Optional: download and install the Vitalsource bookshelf on any computer / device)
+Go to Account / Redeem Code.  Use the code found in your email.
+Problems?  Missing email?  Missing code?  See below or eMail  imvp@exitcertified.com 
+Optional - use the condensed instructions in this document (recommended)
+
+
+Optional / Recommended - Local Lab Setup
+The coding exercises in this course are accessed over remote connection to a Windows instance pre-configured with Eclipse, PyCharm, and Visual Studio.  Some students find the remote connection cumbersome.  So if you prefer, you can work on most of the labs locally (highly recommended):
+
+ Download the Lab source code from my S3 Bucket.
+Recommended - Install the AWS CLI (makes setup a bit easier)
+Java Developer?
+Make sure you have installed Java JDK (8 or later) - NOT just a JRE.  
+IDE recommended (Eclipse, IntelliJ, etc.).  
+Import the Maven projects into your IDE
+If using Eclipse, one of the labs on day 3 will benefit if you install the AWS Toolkit
+Warning: some of the lab code contains hard-coded region names in the Util class (very bad), so adjust as needed.
+.NET Developer?
+Make sure you have Visual Studio installed and running locally
+Import the existing solutions
+Note: when creating a client, you will need to specify the region that you are working in.
+Python Developer?
+Make sure you have Python and Boto3 installed
+Install PyCharm if you like to use an IDE.  Any text editor will do.
+For each lab:
+Get the access key / secret key from Qwiklabs
+Run aws configure command to set your local environment to use these keys.
+You can then bypass most lab instructions about connecting to a remote instance.
+
+
+Cloud9 IDE 
+AWS has a code editor that they are very proud of called Cloud9.  If you want to explore it in the labs (I don’t really use it), follow these instructions (on each lab):
+1.	In Qwiklabs: Start Lab
+2.	In Qwiklabs: Download PPK/PEM
+3.	In AWS Console: Copy Public IPv4 Address of Lab Linux Instance
+4.	SSH to Lab Linux Instance
+5.	In AWS Console: Create Cloud9, page 1-2, don’t submit page 2 yet. Copy Cloud9 public key to clipboard
+6.	In SSH on Lab Linux Instances: Add Cloud9 public key to .ssh/authorized_keys
+7.	In SSH on Lab Linux Instances, execute these commands
+•	sudo pip-2.7 install boto3
+•	sudo yum -y install python36 python36-virtualenv python36-pip gcc glibc-static
+•	sudo pip-3.6 install boto3
+8.	Finish Cloud9 Screens. Install everything
+9.	Continue with Lab
+
+Registration EMails / License Codes
+ 
+Class Location
+Student Name
+Student Email(s)
+Company Name
+Student Location
+Gilmore eBook License Code
+EC-iMVP
+Eric Casteel
+eric.casteel@beneficient.com
+The Beneficient Company Group
+Dallas, TX
+FCRG4RQ4PQVFEU4UNW2U
+EC-iMVP
+Scott Dacus
+sdacus@beneficient.com
+The Beneficient Company Group
+Dallas, TX
+CH68HPKDZGUQUHXRTCMF
+OTTAWA
+Niruban Kandasamy
+niruban.kandasamy@cra-arc.gc.ca
+Canada Revenue Agency (CRA)
+EC-OTTAWA
+EDZAFBEJ3KFU7CNV5DE4
+CHICAGO
+Ben Zifkin
+bzifkin@p-44.com
+project44
+MT-CHICAGO
+H7CKFK5HMEFH6ZBMZFFT
+CHICAGO
+Casey Colby
+casey.colby@northwestern.edu
+Northwestern University
+MT-CHICAGO
+6KMV22HZ3RHPK4ZJBM42
+CHICAGO
+Daniel Hagy
+daniel.hagy@northwestern.edu
+Northwestern University
+MT-CHICAGO
+ZPP8XMJZDZK2C37FSNM2
+CHICAGO
+Justin Gudani
+justin.gudani@northwestern.edu
+Northwestern University
+MT-CHICAGO
+TQ6ZWXBYNT8DCYSKVRJQ
+CHICAGO
+Mukesh Kumar Venkatachalam
+mukesh.venkatachalam@gmail.com
+Aspire Systems Inc
+MT-CHICAGO
+KZVWB8TEJQXEPJV5WEFS
+CHICAGO
+Vineela Karuturi
+vineela_karuturi@bcbsil.com
+Blue Cross/Blue Shield of Illinois
+MT-CHICAGO
+7NGXP68CFVFXPRNAM75A
+DZ7NAKS38EUCYR8CS3GA          
+ 
+Introductions:
+Your name / organization / role
+Experience level with AWS (1-5)
+Which prerequisite AWS training courses have you taken?
+Preferred programming language (Java, C#, Python, Node JS)
+Your objectives / expectations
+Your hobby!
+Objectives:
+Hands On Experience
+Best Practices
+Go Cloud Native
+Least Maintenance
+Get prepared to study Big Data
+Building a Data Lake
+ 
+ 
+
+
+
+Extra Links
+
+AWS SDK’s:
+Java:
+Developer Guide: http://docs.aws.amazon.com/AWSSdkDocsJava/latest/DeveloperGuide/welcome.html
+API: http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/index.html
+.Net
+Developer Guide: http://docs.aws.amazon.com/AWSSdkDocsNET/latest/V3/DeveloperGuide/welcome.html
+API: http://docs.aws.amazon.com/sdkfornet/v3/apidocs/Index.html
+Boto 3 (Python)
+Developer Guide: https://boto3.readthedocs.org/en/latest/
+API: https://boto3.readthedocs.org/en/latest/reference/core/index.html
+JavaScript in the Browser
+Developer Guide: http://docs.aws.amazon.com/AWSJavaScriptSDK/guide/browser-intro.html
+API:  http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/
+JavaScript in Node.js
+Developer Guide: http://docs.aws.amazon.com/AWSJavaScriptSDK/guide/node-intro.html
+API: http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/
+
+General
+Things I wish I knew about AWS before I started:  https://wblinks.com/notes/aws-tips-i-wish-id-known-before-i-started/ 
+“Waiters” in Java SDK: https://aws.amazon.com/blogs/developer/waiters-in-the-aws-sdk-for-java/ 
+Updated Java SDK 2.0:  https://aws.amazon.com/blogs/aws/now-available-developer-preview-of-aws-sdk-for-java-2-0/ 
+
+S3:
+Fake S3:  https://github.com/jubos/fake-s3
+
+DynamoDB:
+Local DynamoDB:  http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tools.DynamoDBLocal.html
+
+
+SQS:
+SQS Long Polling vs Short Polling:  http://pragmaticnotes.com/2017/11/20/amazon-sqs-long-polling-versus-short-polling/ 
+
+Lambda:
+Lambda CLI command:  https://github.com/lucioveloso/cli2cloudformation 
+Lambda CloudFormation Sample:  https://github.com/kennyk65/aws-teaching-demos/blob/master/cloud-formation-demos/dev-lab6-lambda-demo.template.yml 
+Serverless Application Guide:  https://aws.amazon.com/serverless/build-a-web-app/ 
+Beanstalker - Maven plugins for ElasticBeanstalk and Lambda: http://beanstalker.ingenieux.com.br 
+Custom Runtimes & Laters:  https://aws.amazon.com/blogs/aws/new-for-aws-lambda-use-any-programming-language-and-share-common-components/
+
+API Gateway:
+SAM Demo:  https://github.com/kennyk65/aws-teaching-demos/blob/master/cloud-formation-demos/my-sam-demo.template.yml 
+Monitizing APIs:  https://aws.amazon.com/blogs/compute/monetize-your-apis-in-aws-marketplace-using-api-gateway/ 
+JSON Schema:  https://json-schema.org  
+JSON Path:  http://goessner.net/articles/JsonPath/ 
+Velocity Template Language:  http://velocity.apache.org/engine/devel/vtl-reference.html 
+Swagger:  https://swagger.io 
+Open API Specification:  https://github.com/OAI/OpenAPI-Specification 
+
+Step Functions:
+My Step Functions Example:  https://github.com/kennyk65/aws-teaching-demos/blob/master/cloud-formation-demos/my-stepfunction-demo.template.yml 
+Service Integration:  https://aws.amazon.com/blogs/aws/new-compute-database-messaging-analytics-and-machine-learning-integration-for-aws-step-functions
+
+IAM:
+IAM Policies in a Nutshell:  http://start.jcolemorrison.com/aws-iam-policies-in-a-nutshell/ 
+IAM Policy Reference (elements):  http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html 
+IAM Policy Reference (variables): http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_variables.html 
+How the SDKs resolve IAM credentials:  https://aws.amazon.com/blogs/security/a-new-and-standardized-way-to-manage-credentials-in-the-aws-sdks/ 
+Signature Version 4:  http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+
+Docker / Containers:
+DockerFile Reference:  https://docs.docker.com/engine/reference/builder 
+Docker Mastery on Udemy (I’m enrolled in this course): https://www.udemy.com/docker-mastery/ 
+
+AWS Parameter Store / AWS Secrets Manager:
+Integration:  https://aws.amazon.com/about-aws/whats-new/2018/07/aws-systems-manager-parameter-store-integrates-with-aws-secrets-manager-and-adds-parameter-version-labeling/ 
+Demo Spring Application, AWS Parameter Store:  https://github.com/kennyk65/spring-teaching-demos/tree/master/spring-cloud-aws-parameter-store-demo 
+
+
+CloudWatch:
+Good Explanation of CloudWatch Logs:  http://blog.cloudthat.com/cloudwatch-logs/
+CloudWatch + ElasticSearch + Kibana:  https://aws.amazon.com/blogs/aws/cloudwatch-logs-subscription-consumer-elasticsearch-kibana-dashboards/ 
+Cloudwatch Metrics Reference:  http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CW_Support_For_AWS.html 
+Cloudwatch Demo: http://kk-cwdemo.us-west-2.elasticbeanstalk.com/ 
+Code for cloudwatch demo:  https://github.com/kennyk65/spring-teaching-demos/tree/master/spring-cloud-aws-cloudwatch-demo
+
+Elastic Beanstalk:
+Beanstalk - Blue / Green update:  kk-production.us-west-2.elasticbeanstalk.com 
+Beanstalk - Rolling Update:  kk-rolling.us-west-2.elasticbeanstalk.com
+Beanstalk - Custom Platforms:  https://aws.amazon.com/blogs/aws/launch-aws-elastic-beanstalk-launches-support-for-custom-platforms
+
+Cloud Formation:
+Cloud Formation Sample Template (yaml):  https://github.com/kennyk65/aws-teaching-demos/blob/master/cloud-formation-demos/my-cf-demo.template.yml 
+Cloud Formation Reference:  https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-reference.html 
+Terraform:  https://www.terraform.io 
+
+Deploying Software:
+How to Deploy software on AWS:  https://docs.google.com/document/d/1JO9ke_Ixdi4rf9_cQPJRArRYwlVFuIdu31V_8dkSuR8/edit?usp=sharing 
+
+Kinesis:
+Log4J Kinesis appender:  http://docs.aws.amazon.com/ElasticMapReduce/latest/DeveloperGuide/kinesis-pig-publisher.html 
+Logback Kinesis appender:  https://github.com/guardian/kinesis-logback-appender 
+Localytics Case Study:  https://aws.amazon.com/solutions/case-studies/localytics/
+Kinesis MultiLanguageDaemon: http://docs.aws.amazon.com/streams/latest/dev/developing-consumers-with-kcl.html 
+Kinesis vs Kafka Whitepaper:  http://go.datapipe.com/whitepaper-kafka-vs-kinesis-download 
+Lambda Kinesis Example:  
+Code:  https://github.com/kennyk65/aws-teaching-demos/tree/master/lambda-kinesis-demo 
+CloudFormation: https://github.com/kennyk65/aws-teaching-demos/blob/master/cloud-formation-demos/my-kinesis-lambda-demo.template.yml 
+
+Miscellaneous:
+Node JS async / await support: https://aws.amazon.com/blogs/compute/node-js-8-10-runtime-now-available-in-aws-lambda/
+Spring Boot / Cloud Code:  https://github.com/kennyk65/spring-teaching-demos/tree/master/spring-cloud-aws-environment-demo 
+My SWF example code:  https://github.com/kennyk65/spring-teaching-demos/tree/master/spring-cloud-aws-swf-demo 
+CloudFront Min, Max, and Default TTL:  http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html#ExpirationDownloadDist 
+Spring Demos
+Lab 1 - Ready, Set, Go - https://github.com/kennyk65/spring-teaching-demos/tree/master/aws-dev-lab1-ready-set-go
+Lab 2 - S3 - https://github.com/kennyk65/spring-teaching-demos/tree/master/aws-dev-lab2-s3
+Lab 3 - DynamoDB - https://github.com/kennyk65/spring-teaching-demos/tree/master/aws-dev-lab3-dynamodb
+Lab 5 - SNS / SQS - https://github.com/kennyk65/spring-teaching-demos/tree/master/aws-dev-lab5-sqsSns-spring 
+Lab 8 - ElastiCache - https://github.com/kennyk65/spring-teaching-demos/tree/master/aws-dev-lab8-elasticache-spring 
+Microservices With Spring Cloud: https://www.udemy.com/microservices-with-spring-cloud/
+SpringCloudHalfOff
+
+Exam Preparation Resources:
+https://searchaws.techtarget.com/quiz/Amazon-Web-Services-Security-Quiz 
+https://quizlet.com/217577171/aws-architect-associate-simple-storage-service-s3-flash-cards/ 
+http://www.dennyzhang.com/aws_associate_cert/ 
+https://quizlet.com/subject/aws/ 
+https://quizlet.com/210630804/aws-flash-cards/ 
+https://quizlet.com/35935418/detailed-questions-flash-cards/ 
+https://quizlet.com/227222853/dynamodb-faq-flash-cards/ 
+https://cloudacademy.com/quiz/33486/ 
+https://searchaws.techtarget.com/quiz/Test-your-knowledge-Amazon-Simple-Storage-Service-quiz 
+https://searchaws.techtarget.com/quiz/Test-your-knowledge-Amazon-Simple-Queue-Service-quiz 
+https://searchaws.techtarget.com/quiz/Test-your-knowledge-Amazon-CloudFront-quiz 
+https://blog.cloudthat.com/sample-questions-for-amazon-web-services-certified-solution-architect-certification-aws-architect-certification-part-i/ 
+https://blog.cloudthat.com/sample-questions-for-amazon-web-services-certified-solution-architect-certification-aws-architect-certification-part-ii/ 
+
+
+
+
+Day 1 Review Questions…
+
+What are the two type of credentials associated with an IAM User?
+
+What is the difference between an IAM Group and an IAM Role?
+
+What kind of credential is required for an SDK to make an API call?
+
+How many copies does S3 make of your object when you upload it?
+
+A DynamoDB table has one million items in it.  One million get requests are made against it in a single second.  Will DynamoDB slow down when this happens?
+
+
+
+
+
+
+
+
+
+
+
+
+Day 2 Review Questions…
+
+Difference between SQS and SNS?
+
+In Kinesis what is the difference between a Shard and a Stream?
+
+What are the two types of permissions you need to run a Lambda function?
+
+How do you pay for Lambda functions?
+
+In IAM Roles, what is a Trust Policy?
+
+
+LinkedIn Group…
+
+After class is complete, you should receive an eMail inviting you to join our AWS ExitCertified Alumni Group on LinkedIn.  This is a good way to post questions that will be seen not only by me, but the other AWS instructors as well.  Join the group using this link:  https://www.linkedin.com/groups/12150864/
+
+
+Finally, The Evaluation (end of course)...
+ 
+ 
+Chicago https://www.research.net/r/AWS-DEV-100676-Chicago
+Ottawa https://www.research.net/r/AWS-DEV-100679-Ottawa
+iMVP     https://www.research.net/r/AWS-DEV-113080-iMVP
+ 
+ 
+ 
+ 
+ 
+
